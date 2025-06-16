@@ -46,5 +46,23 @@ button:active {
 
 .result {
   font-size: 1.5rem;
-  margin-top: 1rem;
+  min-height: 3.5rem; /* 結果表示エリアの高さを常に確保 */
+}
+
+.button-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+
+button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.status-area {
+  height: 2rem; /* 高さ固定 */
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
 }
