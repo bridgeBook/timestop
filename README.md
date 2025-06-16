@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# 10秒カウントゲーム
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 概要
+このゲームは、プレイヤーが10秒を正確にカウントする能力を試すシンプルなゲームです。スタートボタンを押してから、自分で10秒を数え、ストップボタンを押します。
 
-Currently, two official plugins are available:
+## 機能
+- スタート/ストップ機能
+- 経過時間の表示
+- 結果の表示（10秒との差）
+- モダンでユーザーフレンドリーなUI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 技術スタック
+- React
+- TypeScript
+- Vite
+- CSS3
 
-## Expanding the ESLint configuration
+## インストール方法
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. リポジトリをクローン
+```bash
+git clone [リポジトリURL]
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. 依存関係のインストール
+```bash
+npm install
 ```
+
+3. 開発サーバーの起動
+```bash
+npm run dev
+```
+
+## 使い方
+1. 「スタート」ボタンをクリックしてゲームを開始
+2. 自分で10秒を数える
+3. 10秒経ったと思ったら「ストップ」ボタンをクリック
+4. 結果が表示されます（実際の経過時間と10秒との差）
+
+## 開発者向け情報
+- `src/` ディレクトリにソースコードが格納されています
+- スタイリングは `src/index.css` で管理されています
+- メインのゲームロジックは `src/App.tsx` に実装されています
